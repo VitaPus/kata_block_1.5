@@ -1,0 +1,45 @@
+body {
+    width: 320px;
+    height: 100vh;
+    font-family: "TT Lakes", "Verdana", sans-serif;
+    background-color: #f8f8f8;
+}
+
+.slider-head {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7e7e82;
+    background: linear-gradient(to right, #f8f8f8, #fff);
+    border-top: 1px solid #d9fff5;
+}
+
+.slider-head__title {
+    font-weight: 400;
+    padding: 6px;
+}
+
+.slider-body {
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+    padding-left: 8px;
+}
+.swiper-wrapper {
+ margin: 0;
+ padding-bottom: 30px;
+
+}
+.swiper-pagination {
+    padding: 5px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    position: relative;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: #7e7e82;
+    z-index: 10;
+}

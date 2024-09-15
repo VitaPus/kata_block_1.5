@@ -1,6 +1,6 @@
 body {
     width: 320px;
-    height: 100vh;
+    height: 234px;
     font-family: "TT Lakes", "Verdana", sans-serif;
     background-color: #f8f8f8;
 }
@@ -20,26 +20,122 @@ body {
     padding: 6px;
 }
 
-.slider-body {
+.swiper {
+    width: 310px;
+    height: 110px;
     display: flex;
-    gap: 12px;
-    overflow: hidden;
-    padding-left: 8px;
 }
-.swiper-wrapper {
- margin: 0;
- padding-bottom: 30px;
+
+.slider-body {
+    padding-left: 8px;
 
 }
+.slider-body__grid {
+    display: hidden;
+    overflow: visible;
+}
+
+.swiper-wrapper {
+    display: flex;
+    overflow: visible;
+}
+
+.swiper-slide {
+    display: flex;
+    overflow: visible;
+}
+
 .swiper-pagination {
-    padding: 5px;
+    top: 10px;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
     position: relative;
-    top: 20px;
+    right: 15px;
     width: 12px;
     height: 12px;
     background-color: #7e7e82;
-    z-index: 10;
+}
+
+.slider-body__hidden {
+    display: none;
+
+}
+.slider-body__vision {
+    display: none;
+}
+
+@media (min-width: 767px) {
+
+    body {
+        width: 768px;
+        height: 100%;
+    }
+
+    .slider-head {
+        width: auto;
+        height: auto;
+    }
+
+    .slider-body {
+        height: auto;
+    }
+
+    .swiper {
+        width: auto;
+        height: auto;
+
+    }
+
+    .slider-body__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+    }
+
+    .swiper-slide {
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        /* flex: 1 1 175px; */
+
+    }
+
+    /* .swiper-wrapper .hidden { 
+         display: none; 
+         overflow: hidden;
+     } */
+
+    .swiper-wrapper {
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        flex-flow: wrap;
+
+    }
+
+    .slider-body__hidden {
+        display: block;
+        border: none;
+        background-color: #f8f8f8;
+
+    }
+    .slider-body__vision {
+        border: none;
+        background-color: #f8f8f8; 
+    }
+}
+
+@media (min-width: 1119px) {
+    body {
+        width: 1120px;
+        height: auto;
+    }
+    .slider-body__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+    }
 }
